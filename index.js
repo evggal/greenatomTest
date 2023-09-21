@@ -164,7 +164,7 @@ let first_el = document.getElementsByClassName('nav__first-el')[0]
 let last_el = document.getElementsByClassName('nav__last-el')[0]
 
 honest_el.onclick = () => {
-    for (i = 0; i < todolist.length; i += 2) {
+    for (i = 1; i < todolist.length; i += 2) {
         let elem = document.getElementsByClassName('main__div')[i];
         if (elem.style.marginLeft == '20%' || elem.style.marginLeft == '') {
             elem.style.transition = '1s';
@@ -176,7 +176,7 @@ honest_el.onclick = () => {
 }
 
 add_el.onclick = () => {
-    for (i = 1; i < todolist.length; i += 2) {
+    for (i = 0; i < todolist.length; i += 2) {
         let elem = document.getElementsByClassName('main__div')[i];
         if (elem.style.marginRight == '20%' || elem.style.marginRight == '') {
             elem.style.transition = '1s';
