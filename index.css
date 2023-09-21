@@ -1,0 +1,211 @@
+body {
+    background-image: url('./images/fon4.avif');
+    /* https://ru.freepik.com/free-vector/hand-drawn-abstract-shapes-pattern_18006698.htm#query=%D0%B1%D0%B5%D1%81%D1%88%D0%BE%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%84%D0%BE%D0%BD&position=28&from_view=search&track=ais */
+}
+
+#header {
+    margin: 1% 20%;
+    padding: 1% 3%;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #91d783;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* -webkit-border-image: url("./images/Рамка.svg") 25 / 7px round;*/
+}
+
+#showFormButton {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    transition: 0.5s;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+#color {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    grid-area: C;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+::-webkit-color-swatch {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#title {
+    grid-area: M;
+}
+
+#description {
+    grid-area: D;
+}
+
+#time {
+    grid-area: T;
+}
+
+#hard {
+    grid-area: H;
+    cursor: pointer;
+}
+
+#newTask {
+    display: grid;
+    margin: 1% 20%;
+    grid-template-columns: 10% 50% 30%;
+    grid-template-areas:
+        "C M T"
+        "C D H";
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+#newTask input,
+#newTask select {
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 5px;
+}
+
+#title,
+#description,
+#time,
+#group {
+    border: none;
+    border-radius: 20px;
+    justify-self: stretch;
+    padding: 10px;
+    margin: 5px;
+}
+
+#newTask input:focus-visible,
+#newTask select:focus-visible {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+    ;
+}
+
+#newTaskButton {
+    justify-self: center;
+    grid-column: 1/4;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #91d783;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main__div {
+    display: grid;
+    grid-template-areas: 
+    "header time"
+    "description button";
+    justify-content: space-between;
+    border: 1px var(--color-border) solid;
+    border-radius: 10px;
+    border-left: 10px var(--color-border) solid;
+    background-color: var(--color-background); /* #f0fff2;*/
+    margin: 1% 20%;
+    padding: 1%;
+}
+
+.main__h2 {
+    grid-area: header;
+}
+.main__p {
+    grid-area: description;
+}
+.main__time {
+    grid-area: time;
+    justify-self: end;
+}
+.main__buttonConteiner {
+    grid-area: button;
+}
+.main__taskCompleted, .main__taskDelete {
+    background: none;
+    border: 1px var(--color-border) solid;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+}
+.main__taskCompleted:hover, .main__taskDelete:hover {
+    background-color: var(--color-border);
+}
+
+.main__h2, .main__p, .main__time {
+    padding: 0; margin: 0;
+}
+
+.main__span {
+    /*color: #C0C0C0;*/
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.complete {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation {
+    position: fixed;
+    top: 20px; left: 20px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.nav__honest-el,
+.nav__add-el,
+.nav__first-el,
+.nav__last-el {
+    margin: 5px 0;
+    padding: 5px 5px;
+    border-radius: 10px;
+    border: 2px #83a8e2 solid;
+    background-color: #d5e2fa;
+}
+/*
+.nav__honest-el {
+    grid-area: h;
+}
+.nav__add-el {
+    grid-area: o;
+}
+.nav__first-el {
+    grid-area: f;
+}
+.nav__last-el {
+    grid-area: l;
+}
+*/
+
