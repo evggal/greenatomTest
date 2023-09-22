@@ -26,6 +26,7 @@ body {
     text-align: center;
     vertical-align: middle;
     background-color: #fff;
+    cursor: pointer;
 }
 
 #color {
@@ -82,7 +83,7 @@ body {
     transition: 1s;
     opacity: 0;
     position: absolute;
-    top: 0;
+    top: -100;
 }
 
 #newTask input,
@@ -118,6 +119,11 @@ body {
     background-color: #91d783;
     color: #fff;
     cursor: pointer;
+    transition: 500ms;
+}
+
+#newTaskButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
 }
 
 .main__div {
@@ -155,9 +161,12 @@ body {
     margin-top: 1px;
     margin-bottom: 1px;
     margin-left: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 .main__taskCompleted:hover, .main__taskDelete:hover {
     background-color: var(--color-border);
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .main__h2, .main__p, .main__time {
@@ -193,6 +202,8 @@ body {
     border-radius: 10px;
     border: 2px #83a8e2 solid;
     background-color: #d5e2fa;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 5px;
+    cursor: pointer;
 }
 /*
 .nav__honest-el {

@@ -26,7 +26,7 @@ if (window.localStorage.getItem('todolist') == null) {
     window.localStorage.setItem('todolist', JSON.stringify([]));
 }
 //вытаскиваем из localStoragne список дел
-let todolist = JSON.parse(window.localStorage.getItem('todolist'));
+const todolist = JSON.parse(window.localStorage.getItem('todolist'));
 
 console.log(todolist)
 //узнаём сегодняшнюю дату
@@ -44,7 +44,7 @@ showFormButton.alt = 'Добавить дело';
 
 //по клику поворачиваем плюсик в крестик и обратно
 showFormButton.onclick = function () {
-    if ("rotate(45deg)" == showFormButton.style.transform || "" == showFormButton.style.transform) {
+    if ("rotate(45deg)" == showFormButton.style.transform || "" == showFormButton.style.transform ) {
         showFormButton.style.transform = "rotate(90deg)";
         newTask.style.position = 'initial';
         newTask.style.opacity = "1";
@@ -70,7 +70,7 @@ newTaskButton.onclick = function () {
 }
 
 //достаём main из DOM
-main = document.getElementsByClassName('main')[0];
+const main = document.getElementsByClassName('main')[0];
 
 //массив соответствия group русской группе
 const rus_group = {
